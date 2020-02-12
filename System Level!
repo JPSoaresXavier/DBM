@@ -1,0 +1,266 @@
+{
+  "name": "Sistema de Level",
+  "temp": "expgain",
+  "event-type": "2",
+  "_id": "Xlpbi",
+  "actions": [
+    {
+      "info": "1",
+      "find": "💬▪chat-principal",
+      "storage": "1",
+      "varName": "chat1",
+      "name": "Find Channel"
+    },
+    {
+      "storage": "1",
+      "varName": "chat1",
+      "comparison": "0",
+      "value": "tempVars(\"member\")",
+      "iftrue": "2",
+      "iftrueVal": "5",
+      "iffalse": "0",
+      "iffalseVal": "5",
+      "name": "Check Variable"
+    },
+    {
+      "info": "1",
+      "find": "📣▪chat-voz",
+      "storage": "1",
+      "varName": "chat3",
+      "name": "Find Channel"
+    },
+    {
+      "storage": "1",
+      "varName": "chat3",
+      "comparison": "0",
+      "value": "tempVars(\"member\")",
+      "iftrue": "2",
+      "iftrueVal": "5",
+      "iffalse": "0",
+      "iffalseVal": "5",
+      "name": "Check Variable"
+    },
+    {
+      "message": "1",
+      "varName": "expgain",
+      "info": "3",
+      "storage": "1",
+      "varName2": "member",
+      "name": "Store Message Info"
+    },
+    {
+      "member": "2",
+      "varName": "member",
+      "dataName": "exp",
+      "changeType": "1",
+      "value": "serverVars(\"setxp\")",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "2",
+      "varName": "member",
+      "dataName": "rank",
+      "defaultVal": "1",
+      "storage": "1",
+      "varName2": "userrank",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "2",
+      "varName": "member",
+      "dataName": "exp",
+      "comparison": "4",
+      "value": "${tempVars(\"userrank\") * 20 }",
+      "iftrue": "0",
+      "iftrueVal": "5",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Member Data"
+    },
+    {
+      "member": "2",
+      "varName": "member",
+      "dataName": "exp",
+      "changeType": "0",
+      "value": "0",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "2",
+      "varName": "member",
+      "dataName": "rank",
+      "changeType": "1",
+      "value": "1",
+      "name": "Control Member Data"
+    },
+    {
+      "message": "1",
+      "varName": "expgain",
+      "info": "4",
+      "storage": "1",
+      "varName2": "channel",
+      "name": "Store Message Info"
+    },
+    {
+      "member": "2",
+      "varName": "chat2",
+      "dataName": "rank",
+      "defaultVal": "1",
+      "storage": "1",
+      "varName2": "userrank",
+      "name": "Store Member Data"
+    },
+    {
+      "title": "VOCÊ SUBIU DE NIVEL!",
+      "author": "",
+      "color": "RANDOM",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "https://ap.imagensbrasil.org/images/2018/12/27/level-up-server.gif",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "message",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "message",
+      "message": "** Parabéns! ${tempVars(\"member\")} acabou de subir para o level ${tempVars(\"userrank\")}! IIRRAAAA!** ",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "message",
+      "channel": "5",
+      "varName2": "channel",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "userrank",
+      "comparison": "1",
+      "value": "10",
+      "iftrue": "2",
+      "iftrueVal": "20",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "userrank",
+      "comparison": "1",
+      "value": "30",
+      "iftrue": "2",
+      "iftrueVal": "23",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "userrank",
+      "comparison": "1",
+      "value": "50",
+      "iftrue": "2",
+      "iftrueVal": "26",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "userrank",
+      "comparison": "1",
+      "value": "80",
+      "iftrue": "2",
+      "iftrueVal": "29",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "info": "1",
+      "find": "Kouhai",
+      "storage": "1",
+      "varName": "role1",
+      "name": "Find Role"
+    },
+    {
+      "member": "2",
+      "varName2": "member",
+      "role": "3",
+      "varName": "role1",
+      "name": "Add Member Role"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "info": "1",
+      "find": "Senpai",
+      "storage": "1",
+      "varName": "role2",
+      "name": "Find Role"
+    },
+    {
+      "member": "2",
+      "varName2": "member",
+      "role": "3",
+      "varName": "role2",
+      "name": "Add Member Role"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "info": "1",
+      "find": "Kaichou",
+      "storage": "1",
+      "varName": "role3",
+      "name": "Find Role"
+    },
+    {
+      "member": "2",
+      "varName2": "member",
+      "role": "3",
+      "varName": "role3",
+      "name": "Add Member Role"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "info": "1",
+      "find": "Sensei",
+      "storage": "1",
+      "varName": "role4",
+      "name": "Find Role"
+    },
+    {
+      "member": "2",
+      "varName2": "member",
+      "role": "3",
+      "varName": "role4",
+      "name": "Add Member Role"
+    },
+    {
+      "name": "End Action Sequence"
+    }
+  ]
+}
